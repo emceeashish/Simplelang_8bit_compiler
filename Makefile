@@ -11,7 +11,8 @@ run: build
 	vvp -n computer
 
 clean:
-	rm -rf computer
+	del /F /Q computer 2>nul
+	del /F /Q machine.vcd 2>nul
 
 view:
 	gtkwave machine.vcd gtkwave/config.gtkw
